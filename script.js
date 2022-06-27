@@ -1,6 +1,7 @@
 class jQuery{
    constructor(id){
     this.element=document.getElementById(id)
+    return this.element;
    }
   /*
    setContent(str){
@@ -17,4 +18,4 @@ function $(str){
     const jQ=new jQuery(str);
     return jQ;
 }
-$("test").element.innerHTML= "hello jQuery world";
+$("test").innerHTML= "hello jQuery world";
