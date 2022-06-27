@@ -1,21 +1,22 @@
 class jQuery{
    constructor(id){
-    this.element=document.getElementById(id)
+    this.id=id
     
    }
   
    setContent(str){
-    this.element.innerHTML = str;
-    return this.element;
+    document.getElementById(this.id).innerHTML = str;
+    return document.getElementById(this.id);
    }
    
    append(str){
-    this.element.innerHTML +=str;
-    return this.element;
+    document.getElementById(this.id).innerHTML +=str;
+      
+    return document.getElementById(this.id);
    }
-   setColor(color){
-    this.element.style.color=color;
-    return this.element;
+   setColor(){
+    document.getElementById(this.id).style.color = "#ff0000";
+    return document.getElementById(this.id);
    }
    
 }
@@ -24,4 +25,5 @@ function $(str){
     const jQ=new jQuery(str);
     return jQ;
 }
-$("test").setContent("hello new jQuery").append(" : I append this text").setColor("red")
+$("test").setContent("hello new jQuery").append(" : I append this text")
+$("test").setColor()
