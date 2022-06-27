@@ -6,21 +6,25 @@ class jQuery{
   
    setContent(str){
     document.getElementById(this.id).innerHTML = str;
-    return document.getElementById(this);
+    return this
    }
    
    append(str){
     document.getElementById(this.id).innerHTML +=str;
       
-    return document.getElementById(this);
+    return this
    }
    setColor(color){
     document.getElementById(this.id).style.color = color;
-    return document.getElementById(this);
+    return this
    }
    setBackgroundColor(color){
     document.getElementById(this.id).style.backgroundColor =color
-    return document.getElementById(this);
+    return this
+   }
+   setFontSize(size){
+    document.getElementById(this.id).style.fontSize=size
+    return this
    }
 }
 
@@ -28,5 +32,4 @@ function $(str){
     const jQ=new jQuery(str);
     return jQ;
 }
-$("test").setContent("hello new jQuery").append(" : I append this text")
-$("test").setBackgroundColor("green")
+$("test").setContent("hello new jQuery").append(" : I append this text").setBackgroundColor("green").setColor("red").setFontSize("30px");
