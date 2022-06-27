@@ -13,3 +13,7 @@ class jQuery{
    }
    */
 }
+function $(str){
+    const jQ=new jQuery(str);
+    return jQ;
+}
