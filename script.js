@@ -14,11 +14,10 @@ class jQuery{
       
     return document.getElementById(this.id);
    }
-   setColor(){
-    document.getElementById(this.id).style.color = "#ff0000";
+   setColor(color){
+    document.getElementById(this.id).style.color = color;
     return document.getElementById(this.id);
    }
-   
 }
 
 function $(str){
