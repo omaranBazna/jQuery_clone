@@ -17,3 +17,4 @@ function $(str){
     const jQ=new jQuery(str);
     return jQ;
 }
+$("test").element.innerHTML="hello jQuery";
